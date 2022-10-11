@@ -42,7 +42,13 @@
 ### 3. 신뢰성 있는 영상 기반 객체추적 시스템 개발
 영상 기반으로 객체를 추적하는 시스템은 결과물이 일반 사용자가 이해하기 쉽고</br>
 활용방법이 다양하기 때문에 국내외로 연구가 활발히 진행 중에 있음.</br>
-(연구사례)</br>
+</br>
+- 박종혁, 박도현, 현동환, 나유민 and 이수홍. (2022). 객체 추적 알고리즘을 활용한 딥러닝 기반 실시간 화재 탐지 시스템. 한국컴퓨터정보학회논문지, 27(1), 1-8. <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002807623" target="_blank">LINK</a>
+- 김경훈, 강석주, Junho Heo. (2019). 딥러닝 기반 실시간 다중 객체 추적 시스템. 한국방송미디어공학회 학술발표대회 논문집, (), 246-246. <a href="https://scienceon.kisti.re.kr/srch/selectPORSrchArticle.do?cn=NPAP13342247" target="_blank">LINK</a>
+- Wojke, N., Bewley, A., & Paulus, D. (2017, September). Simple online and realtime tracking with a deep association metric. In 2017 IEEE international conference on image processing (ICIP) (pp. 3645-3649). IEEE. <a href="https://arxiv.org/abs/1703.07402" target="_blank">LINK</a>
+- Du, Y., Song, Y., Yang, B., & Zhao, Y. (2022). Strongsort: Make deepsort great again. arXiv preprint arXiv:2202.13514. <a href="https://arxiv.org/abs/2202.13514" target="_blank">LINK</a>
+
+</br>
 하지만 객체추적 AI의 단점인 사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제가 있음.</br>
 이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 발전을 이루고자 함.
 </br></br>
