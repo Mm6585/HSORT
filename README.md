@@ -46,16 +46,32 @@
 
 ## 시스템 구조
 ![개요도](https://user-images.githubusercontent.com/101806955/195017256-fce55de8-b5cc-4e4a-bef0-7676db793d5d.png)
-<br>
+</br></br>
 * 객체추적 프로그램
-  * YOLOv5와 StrongSORT를 활용하여 객체를 탐지, 추적함.
+  * YOLOv5와 StrongSORT를 활용하여 객체를 탐지, 추적함.</br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/101806955/195027182-bc15b870-0788-415c-8702-d792254fbc8c.png" width="400px" height="100px"></img>    
+  <img src="https://user-images.githubusercontent.com/101806955/195032202-5b2e1c61-118a-4c73-9e3e-288ff1cdba62.png" width="300px" height="100px"></img>
+</div>
+</br></br>
 
 * 서버
-  * Nuxt, Node.js로 프론트/백엔드 개발.
+  * Nuxt.js, Node.js로 프론트/백엔드 개발.
   * Google Firebase Hosting로 배포.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/101806955/195033693-0ee9c805-42b8-452a-87f9-52b98d6b59e4.png" width="400px" height="100px"></img>    
+  <img src="https://user-images.githubusercontent.com/101806955/195035144-54556f33-231b-48bd-9c2e-456f54ae50f5.png"></img>
+  </br></br>
+  <img src="https://user-images.githubusercontent.com/101806955/195034694-7128cf8d-aeb8-476a-917e-a8ab67f8f362.png" width="300px" height="100px"></img>
+</div>
+</br></br>
 
 * DB
   * Google Firebase Realtime DB를 활용.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/101806955/195035930-aa134308-2dff-48ef-94f4-b9dd948fc380.png"></img>
+</div>
+</br></br>
 
 * 어플리케이션
   * 웹서버 및 스마트폰 어플리케이션 개발.
