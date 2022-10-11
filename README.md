@@ -20,14 +20,15 @@
 ## 프로젝트 배경
 
 ### 1. 비접촉식 RFID 출입 시스템
-![image](https://user-images.githubusercontent.com/101806955/195024426-383a2351-fdd3-458b-b540-9408ee203523.png)
+<img src="https://user-images.githubusercontent.com/101806955/195024426-383a2351-fdd3-458b-b540-9408ee203523.png" width="600px" height="350px"></img>  
 <br><br>
 신뢰성있는 비접촉식 RFID 출입 시스템을 개발하여</br>
 기존의 접촉식 RFID 출입 시스템을 사용하지 못하는 상황과</br>
-사용자의 불편함을 해결하고자 함.</br>
+사용자의 불편함을 해결하고자 함.
+</br></br>
 
 ### 2. 교수자와 학생 간의 소통 문제
-![image](https://user-images.githubusercontent.com/101806955/195013863-3e963c05-d372-4bee-bfac-11f783b680e6.png)
+<img src="https://user-images.githubusercontent.com/101806955/195013863-3e963c05-d372-4bee-bfac-11f783b680e6.png" width="600px" height="552px"></img>
 ###### 출처: [충청뉴스 <한밭대, ‘MZ세대 학습자 이해와 공감’ 교수법 세미나 개최>](https://www.ccnnews.co.kr/news/articleView.html?idxno=258946)
 </br>
 코로나19 팬데믹 이후 비대면 수업으로 인해 교수자-학생 소통이 원활하지 않았고</br>
@@ -35,14 +36,16 @@
 소통에 어려움을 겪고 있는 상황임.</br>
 학생의 위치와 정보를 한 눈에 파악할 수 있는 시스템을 통해</br>
 교수자가 학생에 맞는 적절한 피드백을 줄 수 있고</br>
-학생은 자신의 정보를 알고 있는 교수자와 더욱 적극적으로 소통할 수 있는 효과를 기대함.</br>
+학생은 자신의 정보를 알고 있는 교수자와 더욱 적극적으로 소통할 수 있는 효과를 기대함.
+</br></br>
 
 ### 3. 신뢰성 있는 영상 기반 객체추적 시스템 개발
 영상 기반으로 객체를 추적하는 시스템은 결과물이 일반 사용자가 이해하기 쉽고</br>
 활용방법이 다양하기 때문에 국내외로 연구가 활발히 진행 중에 있음.</br>
 (연구사례)</br>
 하지만 객체추적 AI의 단점인 사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제가 있음.</br>
-이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 발전을 이루고자 함.</br>
+이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 발전을 이루고자 함.
+</br></br>
 
 ## 시스템 구조
 ![개요도](https://user-images.githubusercontent.com/101806955/195017256-fce55de8-b5cc-4e4a-bef0-7676db793d5d.png)
