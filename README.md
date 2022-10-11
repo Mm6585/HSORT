@@ -44,6 +44,22 @@
 이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 발전을 이루고자 함.</br>
 
 ## 시스템 구조
+![개요도](https://user-images.githubusercontent.com/101806955/195017256-fce55de8-b5cc-4e4a-bef0-7676db793d5d.png)
+<br>
+* 객체추적 프로그램
+  * YOLOv5와 StrongSORT를 활용하여 객체를 탐지, 추적함.
+
+* 서버
+  * Nuxt, Node.js로 프론트/백엔드 개발.
+  * Google Firebase Hosting로 배포.
+
+* DB
+  * Google Firebase Realtime DB를 활용.
+
+* 어플리케이션
+  * 웹서버 및 스마트폰 어플리케이션 개발.
+
+
 
 ## 결과물
 
