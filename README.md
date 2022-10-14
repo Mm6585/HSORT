@@ -63,6 +63,7 @@
   <img src="https://user-images.githubusercontent.com/101806955/195032202-5b2e1c61-118a-4c73-9e3e-288ff1cdba62.png" width="300px" height="100px"></img>
 </div>
 </br></br>
+
 ### 차폐 및 ID switching 문제
 (차폐 관련 DeepSORT와 StrongSORT 설명)
 - ID switching 문제
