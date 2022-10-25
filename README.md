@@ -57,7 +57,7 @@
 ## 시스템 구조
 ![개요도](https://user-images.githubusercontent.com/101806955/195017256-fce55de8-b5cc-4e4a-bef0-7676db793d5d.png)
 </br></br>
-* 객체추적 프로그램
+### 객체추적 프로그램
   * YOLOv5와 StrongSORT를 활용하여 객체를 탐지, 추적함.</br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101806955/195027182-bc15b870-0788-415c-8702-d792254fbc8c.png" width="400px" height="100px"></img>    
@@ -65,12 +65,18 @@
 </div>
 </br></br>
 
-### 차폐 및 ID switching 문제
-(차폐 관련 DeepSORT와 StrongSORT 설명)
-- ID switching 문제
-ID switching 문제를 해결하기 위해
+* (설명)
+* 차폐 및 ID switching 문제
+  * 차폐 문제</br>
+    객체가 사물에 가려져 추적이 불가능한 상태가 된 후 다시 등장했을 때 발생하는 문제.</br>
+    사라졌던 객체의 ID가 유지되지 않고 새로운 ID가 부여되는 현상 발생.</br>
+  * ID switching 문제</br>
+    객체 간의 겹침이 발생했을 때 서로의 ID가 바뀌는 현상.</br>
+  * 해결방안</br>
+    차폐 : max-id</br>
+    스위칭 : 반고정</br>
 
-* 서버
+### 서버
   * Nuxt.js, Node.js로 프론트/백엔드 개발.
   * Google Firebase Hosting로 배포.
 <div align="center">
@@ -81,14 +87,14 @@ ID switching 문제를 해결하기 위해
 </div>
 </br></br>
 
-* DB
+### DB
   * Google Firebase Realtime DB를 활용.
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101806955/195035930-aa134308-2dff-48ef-94f4-b9dd948fc380.png"></img>
 </div>
 </br></br>
 
-* 어플리케이션
+### 어플리케이션
   * 웹서버 및 스마트폰 어플리케이션 개발.
 
 
