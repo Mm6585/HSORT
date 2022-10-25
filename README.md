@@ -65,7 +65,7 @@
 </div>
 </br></br>
 
-* Yolov5
+* YOLOv5
 
 * StrongSORT
 ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
