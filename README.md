@@ -65,7 +65,20 @@
 </div>
 </br></br>
 
-* (설명)
+* 
+
+* StrongSORT
+![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197724533-bfc607c0-91a2-474a-8d10-63f2a27ec9d9.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197724278-c605b1b8-a1a3-484b-9b0a-0cce6c450489.png)</br>
+
+  * BOT와 ResNet50을 backbone으로 객체의 appearance feature 정보를 획득.</br>
+  * EMA 방식으로 객체들의 appearance state를 업데이트.</br>
+  * 움직임 보정을 위해 ECC를 사용하고 low-quality detection과 noise에 취약한</br>
+    기존의 kalman filter 대신 NSA kalman algorithm을 사용.
+  * cost는 appearance cost와 motion cost의 weight sum.
+</br></br>
 * 차폐 및 ID switching 문제
   * 차폐 문제</br>
     객체가 사물에 가려져 추적이 불가능한 상태가 된 후 다시 등장했을 때 발생하는 문제.</br>
