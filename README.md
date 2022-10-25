@@ -49,8 +49,9 @@
 - Du, Y., Song, Y., Yang, B., & Zhao, Y. (2022). Strongsort: Make deepsort great again. arXiv preprint arXiv:2202.13514. [LINK](https://arxiv.org/abs/2202.13514)
 
 </br>
-하지만 객체추적 AI는 고질적인 단점으로 사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제를 가지고 있음.</br>
-이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 발전을 이루고자 함.
+하지만 객체추적 AI는 고질적인 단점으로</br>
+사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제를 가지고 있음.</br>
+이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 성과를 얻고자 함.
 </br></br>
 
 ## 시스템 구조
