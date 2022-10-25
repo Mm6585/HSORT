@@ -65,11 +65,11 @@
 </div>
 </br></br>
 
-* 
+* Yolov5
 
 * StrongSORT
 ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
-  ![image](https://user-images.githubusercontent.com/101806955/197724533-bfc607c0-91a2-474a-8d10-63f2a27ec9d9.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724278-c605b1b8-a1a3-484b-9b0a-0cce6c450489.png)</br>
 
