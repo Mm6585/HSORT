@@ -62,10 +62,14 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101806955/195027182-bc15b870-0788-415c-8702-d792254fbc8c.png" width="400px" height="100px"></img>    
   <img src="https://user-images.githubusercontent.com/101806955/195032202-5b2e1c61-118a-4c73-9e3e-288ff1cdba62.png" width="300px" height="100px"></img>
+  </br>
+  
+  YOLOv5 by Glenn Jocher [[github]](https://github.com/ultralytics/yolov5)</br>
+  YOLOv5+StrongSORT with OSNet by Mikel Brostrom [[github]](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)</br>
 </div>
 </br></br>
 
-* YOLOv5 - [github](https://github.com/ultralytics/yolov5)</br>
+* YOLOv5</br>
   (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640)</br>
   기존 R-CNN 모델은 Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만</br>
   YOLO는 'You Only Look Once'라는 논문의 제목에 어울리게 Regression Task 1가지의 task로 처리하여</br>
@@ -74,7 +78,7 @@
   YOLOv5는 여러 버전을 거쳐 pytorch 프레임워크를 도입하여 개발된 모델.</br>
 </br>
 
-* StrongSORT - [github](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)</br>
+* StrongSORT</br>
 ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
