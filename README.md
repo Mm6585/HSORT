@@ -62,7 +62,7 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101806955/195027182-bc15b870-0788-415c-8702-d792254fbc8c.png" width="400px" height="100px"></img>    
   <img src="https://user-images.githubusercontent.com/101806955/195032202-5b2e1c61-118a-4c73-9e3e-288ff1cdba62.png" width="300px" height="100px"></img>
-  </br>
+  </br></br>
   
   YOLOv5 by Glenn Jocher [[github]](https://github.com/ultralytics/yolov5)</br>
   YOLOv5+StrongSORT with OSNet by Mikel Brostrom [[github]](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)
