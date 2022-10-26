@@ -75,7 +75,7 @@
   YOLO는 'You Only Look Once'라는 논문의 제목에 어울리게 Regression Task 1가지의 task로 처리하여</br>
   R-CNN에 비해 성능은 조금 하락했지만 detection 속도를 상승시킨 1-stage detector.</br>
   때문에 Real-time object detection에 적합한 특성을 가짐.</br>
-  YOLOv5는 여러 버전을 거쳐 pytorch 프레임워크를 도입하여 개발된 모델.</br>
+  YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨.</br>
 </br>
 
 * StrongSORT</br>
