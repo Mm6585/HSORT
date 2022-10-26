@@ -74,7 +74,7 @@
   YOLOv5는 여러 버전을 거쳐 pytorch 프레임워크를 도입하여 개발된 모델.</br>
 </br>
 
-* StrongSORT
+* StrongSORT - [github](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)</br>
 ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
