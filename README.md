@@ -65,7 +65,14 @@
 </div>
 </br></br>
 
-* YOLOv5
+* YOLOv5 - [github](https://github.com/ultralytics/yolov5)</br>
+  (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640)</br>
+  기존 R-CNN 모델은 Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만</br>
+  YOLO는 'You Only Look Once'라는 논문의 제목에 어울리게 Regression Task 1가지의 task로 처리하여</br>
+  R-CNN에 비해 성능은 조금 하락했지만 detection 속도를 상승시킨 1-stage detector.</br>
+  때문에 Real-time object detection에 적합한 특성을 가짐.</br>
+  YOLOv5는 여러 버전을 거쳐 pytorch 프레임워크를 도입하여 개발된 모델.</br>
+</br>
 
 * StrongSORT
 ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
@@ -79,6 +86,7 @@
     기존의 kalman filter 대신 NSA kalman algorithm을 사용.
   * cost는 appearance cost와 motion cost의 weight sum.
 </br></br>
+
 * 차폐 및 ID switching 문제
   * 차폐 문제</br>
     객체가 사물에 가려져 추적이 불가능한 상태가 된 후 다시 등장했을 때 발생하는 문제.</br>
@@ -86,8 +94,12 @@
   * ID switching 문제</br>
     객체 간의 겹침이 발생했을 때 서로의 ID가 바뀌는 현상.</br>
   * 해결방안</br>
-    차폐 : max-id</br>
-    스위칭 : 반고정</br>
+    * 차폐 문제</br>
+      강의 정원에 맞춰 추적 개체의 최대치를 설정하여 차폐로 인한 새로운 ID 부여 현상을 감소시킴.</br>
+    * ID switching 문제</br>
+      학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 반고정처리 과정을 거침으로써</br>
+      ID switching 발생률을 감소시킴.
+</br></br>
 
 ### 서버
   * Nuxt.js, Node.js로 프론트/백엔드 개발.
