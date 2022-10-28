@@ -79,7 +79,7 @@
 </br>
 
 * StrongSORT</br>
-![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
   ![image](https://user-images.githubusercontent.com/101806955/197724278-c605b1b8-a1a3-484b-9b0a-0cce6c450489.png)</br>
@@ -102,7 +102,21 @@
       강의 정원에 맞춰 추적 개체의 최대치를 설정하여 차폐로 인한 새로운 ID 부여 현상을 감소시킴.</br>
     * ID switching 문제</br>
       학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 반고정처리 과정을 거침으로써</br>
-      ID switching 발생률을 감소시킴.
+      ID switching 발생률을 감소시킴.</br>
+    * 성능 비교
+      * 기본</br>
+      <img src="https://user-images.githubusercontent.com/101806955/198514284-c0a27beb-58b2-49c6-ae92-4ab2b69a6cd4.png" width="586px" height="438px"></br>
+      ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png)</br>
+      ID switching 횟수 : 8회
+      * 적용 결과</br>
+      ![all_capture](https://user-images.githubusercontent.com/101806955/198514341-3cbf4072-8271-4c3d-935c-c33679e8c35d.png)</br>
+      ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png)</br>
+      ID switching 횟수 : 5회</br>
+      
+      실험 결과 ID 수의 최대치를 제한하고 객체 추적 테이블 업데이트에 학생의 위치 정보를 넣음으로써</br>
+      차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음.</br>
+      하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고</br>
+      실험 데이터 기준으로 프레임마다 평균 약 2.2배의 시간이 더 소요됨.
 </br></br>
 
 ### 서버
