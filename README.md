@@ -105,11 +105,11 @@
       ID switching 발생률을 감소시킴.</br>
     * 성능 비교
       * 기본</br>
-      <img src="https://user-images.githubusercontent.com/101806955/198514284-c0a27beb-58b2-49c6-ae92-4ab2b69a6cd4.png" width="586px" height="438px"></br>
+      <img src="https://user-images.githubusercontent.com/101806955/198521164-e96ba56e-b206-4f6c-a87f-1d9579503b38.png" width="586px" height="438px"></br>
       ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png)</br>
       ID switching 횟수 : 8회</br>
       * 적용 결과</br>
-      ![all_capture](https://user-images.githubusercontent.com/101806955/198514341-3cbf4072-8271-4c3d-935c-c33679e8c35d.png)</br>
+      ![all_capture](https://user-images.githubusercontent.com/101806955/198521171-3a877fc7-25f5-4ce0-912e-11530e21001d.png)</br>
       ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png)</br>
       ID switching 횟수 : 5회</br>
       
