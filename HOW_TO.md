@@ -1,6 +1,6 @@
 ### Installation
 ```
-$ git clone 
+$ git clone https://github.com/Mm6585/HSORT.git
 $ cd HSORT
 $ pip install -r requirements.txt
 ```
