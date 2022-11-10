@@ -10,6 +10,15 @@ $ pip install -r requirements.txt
 3. create your realtime DB (test mode)
 4. open project setting -> service account -> generate private key
 5. save your key.json file "HSORT/key/key.json"
+6. open db.py
+7. change Certificate and databaseURL
+```
+cred = credentials.Certificate('./key/your-key.json')
+
+firebase_admin.initialize_app(cred, {
+            'databaseURL': 'your DB url'
+        })
+```
 
 ### Test
 ```
