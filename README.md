@@ -22,8 +22,8 @@
 ### 1. 비접촉식 RFID 출입 시스템
 <img src="https://user-images.githubusercontent.com/101806955/195024426-383a2351-fdd3-458b-b540-9408ee203523.png" width="600px" height="350px"></img>  
 <br><br>
-신뢰성있는 비접촉식 RFID 출입 시스템을 개발하여</br>
-기존의 접촉식 RFID 출입 시스템을 사용하지 못하는 상황과</br>
+신뢰성있는 비접촉식 RFID 출입 시스템을 개발하여 </br>
+기존의 접촉식 RFID 출입 시스템을 사용하지 못하는 상황과 </br>
 사용자의 불편함을 해결하고자 함.
 </br></br>
 
@@ -31,17 +31,17 @@
 <img src="https://user-images.githubusercontent.com/101806955/195013863-3e963c05-d372-4bee-bfac-11f783b680e6.png" width="600px" height="552px"></img>
 ###### 출처: [충청뉴스 <한밭대, ‘MZ세대 학습자 이해와 공감’ 교수법 세미나 개최>](https://www.ccnnews.co.kr/news/articleView.html?idxno=258946)
 </br>
-코로나19 팬데믹 이후 비대면 수업으로 인해 교수자-학생 소통이 원활하지 않았고</br>
-대면 수업 전환 이후에도 1학년부터 혹은 복학 후 비대면 수업을 경험한 상황 등에 의해</br>
-소통에 어려움을 겪고 있는 상황임.</br>
-학생의 위치와 정보를 한 눈에 파악할 수 있는 시스템을 통해</br>
-교수자가 학생에 맞는 적절한 피드백을 줄 수 있고</br>
+코로나19 팬데믹 이후 비대면 수업으로 인해 교수자-학생 소통이 원활하지 않았고 </br>
+대면 수업 전환 이후에도 1학년부터 혹은 복학 후 비대면 수업을 경험한 상황 등에 의해 </br>
+소통에 어려움을 겪고 있는 상황임. </br>
+학생의 위치와 정보를 한 눈에 파악할 수 있는 시스템을 통해 </br>
+교수자가 학생에 맞는 적절한 피드백을 줄 수 있고 </br>
 학생은 자신의 정보를 알고 있는 교수자와 더욱 적극적으로 소통할 수 있는 효과를 기대함.
 </br></br>
 
 ### 3. 신뢰성 있는 영상 기반 객체추적 시스템 개발
-영상 기반으로 객체를 추적하는 시스템은 결과물이 일반 사용자가 이해하기 쉽고</br>
-활용방법이 다양하기 때문에 국내외로 연구가 활발히 진행 중에 있음.</br>
+영상 기반으로 객체를 추적하는 시스템은 결과물이 일반 사용자가 이해하기 쉽고 </br>
+활용방법이 다양하기 때문에 국내외로 연구가 활발히 진행 중에 있음. </br>
 </br>
 - 박종혁, 박도현, 현동환, 나유민 and 이수홍. (2022). 객체 추적 알고리즘을 활용한 딥러닝 기반 실시간 화재 탐지 시스템. 한국컴퓨터정보학회논문지, 27(1), 1-8. [LINK](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002807623)
 - 김경훈, 강석주, Junho Heo. (2019). 딥러닝 기반 실시간 다중 객체 추적 시스템. 한국방송미디어공학회 학술발표대회 논문집, (), 246-246. [LINK](https://scienceon.kisti.re.kr/srch/selectPORSrchArticle.do?cn=NPAP13342247)
@@ -49,8 +49,8 @@
 - Du, Y., Song, Y., Yang, B., & Zhao, Y. (2022). Strongsort: Make deepsort great again. arXiv preprint arXiv:2202.13514. [LINK](https://arxiv.org/abs/2202.13514)
 
 </br>
-하지만 객체추적 AI는 고질적인 단점으로</br>
-사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제를 가지고 있음.</br>
+하지만 객체추적 AI는 고질적인 단점으로 </br>
+사물에 의한 차폐와 객체 간의 겹침으로 인한 ID switching 문제를 가지고 있음. </br>
 이를 해결하기 위한 방안을 고려하고 실제로 적용하여 기술적인 성과를 얻고자 함.
 </br></br>
 
@@ -70,52 +70,52 @@
 </br></br>
 
 * YOLOv5</br>
-  (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640)</br>
-  기존 R-CNN 모델은 Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만</br>
-  YOLO는 'You Only Look Once'라는 논문의 제목에 어울리게 Regression Task 1가지의 task로 처리하여</br>
-  R-CNN에 비해 성능은 조금 하락했지만 detection 속도를 상승시킨 1-stage detector.</br>
-  때문에 Real-time object detection에 적합한 특성을 가짐.</br>
-  YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨.</br>
+  (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640) </br>
+  기존 R-CNN 모델은 Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만 </br>
+  YOLO는 R-CNN에 비해 성능은 조금 하락했지만 'You Only Look Once'라는 논문의 제목에 어울리게 </br>
+  Regression Task 1가지의 task로 처리하여 detection 속도를 상승시킨 1-stage detector. </br>
+  때문에 Real-time object detection에 적합한 특성을 가짐. </br>
+  YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨. </br>
 </br>
 
 * StrongSORT</br>
-  ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png)</br>
-  ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png)</br>
-  ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png)</br>
-  ![image](https://user-images.githubusercontent.com/101806955/197724278-c605b1b8-a1a3-484b-9b0a-0cce6c450489.png)</br>
+  ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png) </br>
+  ![image](https://user-images.githubusercontent.com/101806955/197728345-d2611d70-0d40-4032-a7c1-138ecf7b4f8b.png) </br>
+  ![image](https://user-images.githubusercontent.com/101806955/197724671-a0a55b14-795a-4e04-865e-cc77e59110e2.png) </br>
+  ![image](https://user-images.githubusercontent.com/101806955/197724278-c605b1b8-a1a3-484b-9b0a-0cce6c450489.png) </br>
 
-  * BOT와 ResNeSt50을 backbone으로 객체의 appearance feature 정보를 획득.</br>
-  * EMA 방식으로 객체들의 appearance state를 업데이트.</br>
-  * 움직임 보정을 위해 ECC를 사용하고 low-quality detection과 noise에 취약한</br>
+  * BOT와 ResNeSt50을 backbone으로 객체의 appearance feature 정보를 획득. </br>
+  * EMA 방식으로 객체들의 appearance state를 업데이트. </br>
+  * 움직임 보정을 위해 ECC를 사용하고 low-quality detection과 noise에 취약한 </br>
     기존의 kalman filter 대신 NSA kalman algorithm을 사용.
   * cost는 appearance cost와 motion cost의 weight sum.
 </br></br>
 
 * 차폐 및 ID switching 문제
   * 차폐 문제</br>
-    객체가 사물에 가려져 추적이 불가능한 상태가 된 후 다시 등장했을 때 발생하는 문제.</br>
-    사라졌던 객체의 ID가 유지되지 않고 새로운 ID가 부여되는 현상 발생.</br>
-  * ID switching 문제</br>
-    객체 간의 겹침이 발생했을 때 서로의 ID가 바뀌는 현상.</br>
-  * 해결방안</br>
-    * 차폐 문제</br>
-      강의 정원에 맞춰 추적 개체의 최대치를 설정하여 차폐로 인한 새로운 ID 부여 현상을 감소시킴.</br>
-    * ID switching 문제</br>
-      학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 반고정처리 과정을 거침으로써</br>
-      ID switching 발생률을 감소시킴.</br>
+    객체가 사물에 가려져 추적이 불가능한 상태가 된 후 다시 등장했을 때 발생하는 문제. </br>
+    사라졌던 객체의 ID가 유지되지 않고 새로운 ID가 부여되는 현상 발생. </br>
+  * ID switching 문제 </br>
+    객체 간의 겹침이 발생했을 때 서로의 ID가 바뀌는 현상. </br>
+  * 해결방안 </br>
+    * 차폐 문제 </br>
+      강의 정원에 맞춰 추적 개체의 최대치를 설정하여 차폐로 인한 새로운 ID 부여 현상을 감소시킴. </br>
+    * ID switching 문제 </br>
+      학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 반고정처리 과정을 거침으로써 </br>
+      ID switching 발생률을 감소시킴. </br>
     * 성능 비교
-      * 기본</br>
-      <img src="https://user-images.githubusercontent.com/101806955/198521709-2a3c3074-9103-431e-9f11-1126750c6085.png" width="586px" height="438px"></br>
-      ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png)</br>
-      ID switching 횟수 : 8회</br>
-      * 적용 결과</br>
-      ![all_capture](https://user-images.githubusercontent.com/101806955/198521171-3a877fc7-25f5-4ce0-912e-11530e21001d.png)</br>
-      ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png)</br>
-      ID switching 횟수 : 5회</br>
+      * 기본 </br>
+      <img src="https://user-images.githubusercontent.com/101806955/198521709-2a3c3074-9103-431e-9f11-1126750c6085.png" width="586px" height="438px"> </br>
+      ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png) </br>
+      ID switching 횟수 : 8회 </br>
+      * 적용 결과 </br>
+      ![all_capture](https://user-images.githubusercontent.com/101806955/198521171-3a877fc7-25f5-4ce0-912e-11530e21001d.png) </br>
+      ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png) </br>
+      ID switching 횟수 : 5회 </br>
 
-      실험 결과 ID 수의 최대치를 제한하고 객체 추적 테이블 업데이트에 학생의 위치 정보를 넣음으로써</br>
-      차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음.</br>
-      하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고</br>
+      실험 결과 ID 수의 최대치를 제한하고 객체 추적 테이블 업데이트에 학생의 위치 정보를 넣음으로써 </br>
+      차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음. </br>
+      하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고 </br>
       실험 데이터 기준으로 기본 상태의 tracker에 비해 프레임마다 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
 </br></br>
 
