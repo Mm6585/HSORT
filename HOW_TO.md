@@ -43,3 +43,5 @@ Add ReID model option like:
 $ python track.py --source test.mp4 --room-no [anything] --max-id [int>=17] --strong-sort-weights resnet50_fc512_msmt17.pt
 ```
 Before the next run, move the ReID model file into weights folder
+
+* * *
