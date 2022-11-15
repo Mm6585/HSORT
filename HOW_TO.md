@@ -20,10 +20,10 @@ $ pip install -r requirements.txt
 6. open db.py
 7. change Certificate and databaseURL
 ```
-cred = credentials.Certificate('./key/your-key.json')
+cred = credentials.Certificate('./key/Firebase_Realtime_DB_key.json')
 
 firebase_admin.initialize_app(cred, {
-            'databaseURL': 'your DB url'
+            'databaseURL': 'Firebase_Realtime_DB_url'
         })
 ```
 
