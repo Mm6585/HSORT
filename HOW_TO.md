@@ -2,8 +2,13 @@
 ```
 $ git clone https://github.com/Mm6585/HSORT.git
 $ cd HSORT
+$ git clone https://github.com/ultralytics/yolov5.git
+$ git clone https://github.com/KaiyangZhou/deep-person-reid.git ./strong_sort/deep/reid
 $ pip install -r requirements.txt
 ```
+
+* * *
+
 ### Get Firebase Realtime DB key
 1. https://console.firebase.google.com/
 2. create your project
@@ -20,10 +25,18 @@ firebase_admin.initialize_app(cred, {
         })
 ```
 
+* * *
+
 ### Test
+```
+$ python track.py --source test.mp4 --room-no [anything] --max-id [int>=17]
+```
+
+* * *
+
+### No URL associated to the chosen DeepSort weights.
+
+Add ReID model option like:
 ```
 $ python track.py --source test.mp4 --room-no [anything] --max-id [int>=17] --strong-sort-weights resnet50_fc512_msmt17.pt
 ```
-
-*****
-
