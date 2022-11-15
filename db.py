@@ -6,11 +6,11 @@ from firebase_admin import db
 class DB:
     def __init__(self, room_no, max_id):
         # Fetch the service account key JSON file contents
-        cred = credentials.Certificate('./key/your-key.json')
+        cred = credentials.Certificate('./key/Firebase_Realtime_DB-key.json')
 
         # Initialize the app with a service account, granting admin privileges
         firebase_admin.initialize_app(cred, {
-            'databaseURL': 'your database url'
+            'databaseURL': 'Firebase_Realtime_DB_url'
         })
 
         # As an admin, the app has access to read and write all data, regradless of Security Rules
