@@ -6,7 +6,7 @@ from . import linear_assignment
 from . import iou_matching
 from .track import Track
 ###
-import requests
+import socket
 import time
 from location import Location
 
@@ -106,7 +106,7 @@ class Tracker:
             track_idx, detection_idx  = matches[i][0], matches[i][1]
             cx, cy, _, _ = detections[detection_idx].to_xyah()
             loc = Location(cx, cy)
-            location = loc.get_location()
+            location= loc.get_location()
             
             if ((location != 0) and (location != self.tracks[track_idx].location)):
                 id = int(self.db.get_id(location))
@@ -229,8 +229,8 @@ class Tracker:
                         self.id = i.track_id
                         break
         else:
-            # self.id = self.get_id()
-            self.id += 1
+            self.id = self.get_id()
+            # self.id += 1
             self.ids.append(self.id)
             print(self.id)
         ###
@@ -239,16 +239,21 @@ class Tracker:
             detection.feature)) 
 ###
     def get_id(self):
-        data = {}
-        headers = {}
+        while(True):
+            self.client_socket.sendall(b'request id')
+            id = self.client_socket.recv(32).decode()
+            print(id)
+            if (len(id) > 0):
+                self.client_socket.send(b'receive id')
+                break
 
-        url = "https://capstone-5857b.web.app/test"
-        res = requests.post(url, json=data, headers=headers)
-        id = res.text
-        while (id in self.ids):
-            res = requests.post(url, json=data, headers=headers)
-            id = res.text
-            time.sleep(1)
-        
         return id
+
+def set_client_socket(client_socket):
+    Tracker.client_socket = client_socket
+    client_socket.sendall(b'track')
+    data = client_socket.recv(32).decode()
+    print(data)
+    if (data == 'check'):
+        client_socket.sendall(b'check')
 ###
