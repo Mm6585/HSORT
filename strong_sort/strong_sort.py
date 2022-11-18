@@ -74,6 +74,7 @@ class StrongSORT(object):
         # output bbox identities
         outputs = []
         update_dict = {}
+        
         for track in self.tracker.tracks:
             if not track.is_confirmed() or track.time_since_update > 1:
                 continue
@@ -84,17 +85,20 @@ class StrongSORT(object):
             track_id = track.track_id
             cx, cy = (x1+x2)/2, (y1+y2)/2   ###
             loc = Location(cx, cy)  ###
-            location = loc.get_location()  ###
+            location= loc.get_location()  ###
+            ###
+            if (location != 0):
+                if (location != track.location):
+                    update_dict['seat'+str(location)] = {
+                        'id': str(track_id)
+                    }
+                    update_dict['seat'+str(track.location)] = {
+                        'id': 0
+                    }
+            ###
             track.location = location   ###
             conf = track.conf
             outputs.append(np.array([x1, y1, x2, y2, track_id, location, conf]))    ###
-            ###
-            if (location != 0):
-                update_dict['seat'+str(location)] = {
-                    'id': str(track_id)
-                }
-            ###
-        
         if len(outputs) > 0:
             outputs = np.stack(outputs, axis=0)
         return outputs, update_dict
