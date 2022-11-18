@@ -1,5 +1,4 @@
 import argparse
-
 import os
 # limit the number of cpus used by high performance libraries
 os.environ["OMP_NUM_THREADS"] = "1"
@@ -38,6 +37,8 @@ from strong_sort.strong_sort import StrongSORT
 
 ###
 from db import DB
+import socket
+from strong_sort.sort.tracker import set_client_socket
 ###
 
 # remove duplicated stream handler to avoid duplicated logging
@@ -80,7 +81,16 @@ def run(
         ###
 ):
 
+    ###
+    host = '192.168.43.241'
+    port = 5000
+    
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect((host, port))
+    set_client_socket(client_socket)
+
     db = DB(room_no, max_id)
+    ###
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
     is_file = Path(source).suffix[1:] in (VID_FORMATS)
@@ -306,7 +316,7 @@ def parse_opt():
     parser.add_argument('--nosave', action='store_true', help='do not save images/videos')
     ###
     parser.add_argument('--max-id', type=int, help='total number of members')
-    parser.add_argument('--room-no', type=int, help='target room number')
+    parser.add_argument('--room-no', type=str, help='target room number')
     ###
     # class 0 is person, 1 is bycicle, 2 is car... 79 is oven
     parser.add_argument('--classes', nargs='+', type=int, default=0, help='filter by class: --classes 0, or --classes 0 2 3')
