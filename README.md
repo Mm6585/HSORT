@@ -106,9 +106,9 @@
     * 성능 비교
       * 기본 </br>
       <img src="https://user-images.githubusercontent.com/101806955/198521709-2a3c3074-9103-431e-9f11-1126750c6085.png" width="586px" height="438px"> </br>
-      CPU -  </br>
+      CPU - <img src="https://user-images.githubusercontent.com/101806955/203014801-1701ea35-501b-48c6-9d0c-e8bda006c840.png" width="826px" height="18px"> </br>
       GPU - ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png) </br>
-      ID 수 :  </br>
+      ID 수 : 20 </br>
       ID switching 횟수 : 8회 </br>
       * 적용 결과 </br>
       ![all_capture](https://user-images.githubusercontent.com/101806955/198521171-3a877fc7-25f5-4ce0-912e-11530e21001d.png) </br>
@@ -121,8 +121,8 @@
       차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음. </br>
       하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고 </br>
       실험 데이터 기준으로 기본 상태의 tracker에 비해 프레임마다 아래와 같이 처리 시간이 증가함.
-      * CPU 기준 - 평균 약 
-      * GPU 기준 - 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
+      * CPU 기준 - 추적 업데이트(StrongSORT update)에 평균 약 1.03배의 시간(185.6ms)이 소요됨.
+      * GPU 기준 - 추적 업데이트(StrongSORT update)에 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
 </br></br>
 
 ### 서버
