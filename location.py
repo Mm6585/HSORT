@@ -9,7 +9,6 @@ def get_json(room_no):
     path = os.getcwd()
     file = os.path.join(path, "room_data", room_no)
     file += ".json"
-    print(file)
 
     if (os.path.isfile(file)):
         with open(file, "r") as sample_json:
