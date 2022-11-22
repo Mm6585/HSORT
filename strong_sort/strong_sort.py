@@ -92,9 +92,10 @@ class StrongSORT(object):
                     update_dict['seat'+str(location)] = {
                         'id': str(track_id)
                     }
-                    update_dict['seat'+str(track.location)] = {
-                        'id': 0
-                    }
+                    if (track.location != 0):
+                        update_dict['seat'+str(track.location)] = {
+                            'id': 0
+                        }
             ###
             track.location = location   ###
             conf = track.conf
