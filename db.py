@@ -8,11 +8,11 @@ from location import num_seats
 class DB:
     def __init__(self, room_no, max_id):
         # Fetch the service account key JSON file contents
-        cred = credentials.Certificate('./key/Firebase_Realtime_DB_key.json')
+        cred = credentials.Certificate('./key/capstone-5857b-firebase-adminsdk-d0jyz-62f412bf46.json')
 
         # Initialize the app with a service account, granting admin privileges
         firebase_admin.initialize_app(cred, {
-            'databaseURL': 'Firebase_Realtime_DB_url'
+            'databaseURL': 'https://capstone-5857b-default-rtdb.firebaseio.com/'
         })
 
         # As an admin, the app has access to read and write all data, regradless of Security Rules
@@ -20,8 +20,12 @@ class DB:
         self.max_id = max_id
 
     def init_room(self):
+        init_dict = dict()
         for i in range(num_seats()):
-            self.ref.child('seat'+str(i+1)).child('id').set(0)
+            init_dict['seat'+str(i+1)] = {
+                'id': 0
+            }
+        self.ref.set(init_dict)
 
     def get_data(self):
         return self.ref.get()

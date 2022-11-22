@@ -1,9 +1,24 @@
 import json
+import os
 import pandas as pd
+from read_pic import read_pic
 
-with open("location.json", "r") as sample_json:
-    sample = json.load(sample_json)
-df = pd.DataFrame(sample)
+def get_json(room_no):
+    global df
+
+    path = os.getcwd()
+    file = os.path.join(path, "room_data", room_no)
+    file += ".json"
+    print(file)
+
+    if (os.path.isfile(file)):
+        with open(file, "r") as sample_json:
+            sample = json.load(sample_json)
+        df = pd.DataFrame(sample)
+        return df
+    else:
+        read_pic(room_no)
+        df = get_json(room_no)
 
 def num_seats():
     return len(df)

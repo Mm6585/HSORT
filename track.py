@@ -39,6 +39,7 @@ from strong_sort.strong_sort import StrongSORT
 from db import DB
 import socket
 from strong_sort.sort.tracker import set_client_socket
+from location import get_json
 ###
 
 # remove duplicated stream handler to avoid duplicated logging
@@ -82,12 +83,14 @@ def run(
 ):
 
     ###
-    host = '192.168.43.241'
-    port = 5000
+    # host = '192.168.43.241'
+    # port = 5000
     
-    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect((host, port))
-    set_client_socket(client_socket)
+    # client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # client_socket.connect((host, port))
+    # set_client_socket(client_socket)
+
+    get_json(room_no)
 
     db = DB(room_no, max_id)
     ###
