@@ -121,8 +121,10 @@
       차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음. </br>
       하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고 </br>
       실험 데이터 기준으로 기본 상태의 tracker에 비해 프레임마다 아래와 같이 처리 시간이 증가함.
-      * CPU 기준 - 추적 업데이트(StrongSORT update)에 평균 약 1.03배의 시간(+185.6ms)이 소요됨.
-      * GPU 기준 - 추적 업데이트(StrongSORT update)에 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
+      * CPU (Intel i3-10110U) </br>
+        추적 업데이트(StrongSORT update)에 평균 약 1.03배의 시간(+185.6ms)이 소요됨.
+      * GPU (Geforce RTX 2060) </br>
+        추적 업데이트(StrongSORT update)에 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
 </br></br>
 
 ### 서버
