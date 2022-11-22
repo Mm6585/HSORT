@@ -23,8 +23,6 @@ def num_seats():
     return len(df)
 
 class Location:
-    room_image = "" # room image path
-
     def __init__(self, center_x, center_y):
         self.cx = center_x
         self.cy = center_y
