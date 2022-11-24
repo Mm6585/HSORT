@@ -108,8 +108,8 @@
     * Occlusion 문제 </br>
       강의 정원에 맞춰 추적 개체의 최대치를 설정하여 차폐로 인한 새로운 ID 부여 현상을 감소시킴.
     * ID switching 문제 </br>
-      학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 반고정처리 과정을 거침으로써 </br>
-      ID switching 발생률을 감소시킴.
+      학생이 앉은 자리를 잘 변경하지 않는다는 것을 고려하여 학생의 위치 정보 </br>
+      반고정처리 과정을 거침으로써 ID switching 발생률을 감소시킴. </br>
     * 성능 비교
       * 기본 </br>
       <img src="https://user-images.githubusercontent.com/101806955/198521709-2a3c3074-9103-431e-9f11-1126750c6085.png" width="586px" height="438px"> </br>
