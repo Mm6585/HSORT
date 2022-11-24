@@ -25,7 +25,8 @@
 신뢰성있는 비접촉식 RFID 출입 시스템을 개발하여 </br>
 기존의 접촉식 RFID 출입 시스템을 사용하지 못하는 상황과 </br>
 사용자의 불편함을 해결하고자 함.
-</br></br>
+
+- - -
 
 ### 2. 교수자와 학생 간의 소통 문제
 <img src="https://user-images.githubusercontent.com/101806955/195013863-3e963c05-d372-4bee-bfac-11f783b680e6.png" width="600px" height="552px"></img>
@@ -37,7 +38,8 @@
 학생의 위치와 정보를 한 눈에 파악할 수 있는 시스템을 통해 </br>
 교수자가 학생에 맞는 적절한 피드백을 줄 수 있고 </br>
 학생은 자신의 정보를 알고 있는 교수자와 더욱 적극적으로 소통할 수 있는 효과를 기대함.
-</br></br>
+
+- - -
 
 ### 3. 신뢰성 있는 영상 기반 객체추적 시스템 개발
 영상 기반으로 객체를 추적하는 시스템은 결과물이 일반 사용자가 이해하기 쉽고 </br>
@@ -57,7 +59,9 @@
 
 ## 시스템 구조
 ![개요도](https://user-images.githubusercontent.com/101806955/195017256-fce55de8-b5cc-4e4a-bef0-7676db793d5d.png)
-</br></br>
+
+- - -
+
 ### 객체추적 프로그램
   * YOLOv5와 StrongSORT를 활용하여 객체를 탐지, 추적함.</br>
 <div align="center">
@@ -127,7 +131,8 @@
         추적 업데이트(StrongSORT update)에 평균 약 1.03배의 시간(+185.6ms)이 소요됨.
       * GPU (Geforce RTX 2060) </br>
         추적 업데이트(StrongSORT update)에 평균 약 2.2배의 시간(+76.4ms)이 소요됨.
-</br></br>
+
+- - -
 
 ### 서버
   * Nuxt.js, Node.js로 프론트/백엔드 개발.
@@ -138,14 +143,16 @@
   </br></br>
   <img src="https://user-images.githubusercontent.com/101806955/195034694-7128cf8d-aeb8-476a-917e-a8ab67f8f362.png" width="300px" height="100px"></img>
 </div>
-</br></br>
+
+- - -
 
 ### DB
   * Google Firebase Realtime DB를 활용.
 <div align="center">
   <img src="https://user-images.githubusercontent.com/101806955/195035930-aa134308-2dff-48ef-94f4-b9dd948fc380.png"></img>
 </div>
-</br></br>
+
+- - -
 
 ### 어플리케이션
   * 웹서버 및 스마트폰 어플리케이션 개발.
