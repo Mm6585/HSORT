@@ -71,9 +71,10 @@
 
 * YOLOv5</br>
   (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640) </br>
-  기존 R-CNN 모델은 Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만 </br>
+  기존 R-CNN 모델은 이미지 1장을 여러 장으로 쪼갠 후 </br>
+  Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만 </br>
   YOLO는 R-CNN에 비해 성능은 조금 하락했지만 'You Only Look Once'라는 논문의 제목에 어울리게 </br>
-  Regression Task 1가지의 task로 처리하여 detection 속도를 상승시킨 1-stage detector. </br>
+  이미지 전체를 Regression Task 1가지의 task로 처리하여 detection 속도를 상승시킨 1-stage detector. </br>
   때문에 Real-time object detection에 적합한 특성을 가짐. </br>
   YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨. </br>
 </br>
