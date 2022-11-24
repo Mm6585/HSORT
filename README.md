@@ -121,12 +121,12 @@
       CPU - <img src="https://user-images.githubusercontent.com/101806955/203012957-c8f549cf-3d3f-42e7-8e5f-9bfa5bab315a.png" width="826px" height="25px"> </br>
       GPU - ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png) </br>
       ID 수 : 17 (max-id 옵션으로 17 제한) </br>
-      ID switching 횟수 : 5회 </br>
-
-      실험 결과 ID 수의 최대치를 제한하고 객체 추적 테이블 업데이트에 학생의 위치 정보를 넣음으로써 </br>
-      차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음. </br>
-      하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고 </br>
-      실험 데이터 기준으로 기본 상태의 tracker에 비해 프레임마다 아래와 같이 처리 시간이 증가함.
+      ID switching 횟수 : 5회 </br></br>
+      
+      > 실험 결과 ID 수의 최대치를 제한하고 객체 추적 테이블 업데이트에 학생의 위치 정보를 넣음으로써 </br>
+      > 차폐 및 객체 간 겹침으로 인한 새로운 ID 부여 현상과 ID switching 현상을 줄일 수 있었음. </br>
+      > 하지만 객체 간의 겹침이 활발할 경우에 그렇지 않은 경우보다 처리 과정이 오래 걸렸고 </br>
+      > 실험 데이터 기준으로 기본 상태의 tracker에 비해 프레임마다 아래와 같이 처리 시간이 증가함.
       * CPU (Intel i3-10110U) </br>
         추적 업데이트(StrongSORT update)에 평균 약 1.03배의 시간(+185.6ms)이 소요됨.
       * GPU (Geforce RTX 2060) </br>
