@@ -113,14 +113,18 @@
     * 성능 비교
       * 기본 </br>
       <img src="https://user-images.githubusercontent.com/101806955/198521709-2a3c3074-9103-431e-9f11-1126750c6085.png" width="586px" height="438px"> </br>
-      CPU - <img src="https://user-images.githubusercontent.com/101806955/203014801-1701ea35-501b-48c6-9d0c-e8bda006c840.png" width="826px" height="18px"> </br>
-      GPU - ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png) </br>
+      CPU </br>
+      ![default](https://user-images.githubusercontent.com/101806955/203014801-1701ea35-501b-48c6-9d0c-e8bda006c840.png) </br>
+      GPU </br>
+      ![default](https://user-images.githubusercontent.com/101806955/198514303-9b77ecbb-290f-4227-b29a-5d5d7fcb7705.png) </br>
       ID 수 : 20 </br>
       ID switching 횟수 : 8회 </br>
       * 적용 결과 </br>
       ![all_capture](https://user-images.githubusercontent.com/101806955/198521171-3a877fc7-25f5-4ce0-912e-11530e21001d.png) </br>
-      CPU - <img src="https://user-images.githubusercontent.com/101806955/203012957-c8f549cf-3d3f-42e7-8e5f-9bfa5bab315a.png" width="826px" height="25px"> </br>
-      GPU - ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png) </br>
+      CPU </br>
+      ![all](https://user-images.githubusercontent.com/101806955/203012957-c8f549cf-3d3f-42e7-8e5f-9bfa5bab315a.png) </br>
+      GPU </br>
+      ![all](https://user-images.githubusercontent.com/101806955/198514351-82d77078-830f-4d2c-82e1-911b2bf41bbc.png) </br>
       ID 수 : 17 (max-id 옵션으로 17 제한) </br>
       ID switching 횟수 : 5회 </br></br>
       
