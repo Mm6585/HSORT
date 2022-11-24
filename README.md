@@ -82,7 +82,7 @@
   Bounding Box Regression, Detection Score를 찾는 2가지의 task를 수행했지만 </br>
   YOLO는 R-CNN에 비해 성능은 조금 하락했지만 'You Only Look Once'라는 논문의 제목에 어울리게 </br>
   이미지 전체를 Regression Task 1가지의 task로 처리하여 detection 속도를 상승시킨 1-stage detector. </br>
-  때문에 Real-time object detection에 적합한 특성을 가짐. </br>
+  때문에 Real-time object detection에 적합한 특성을 가짐. </br></br>
   YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨. </br>
 </br>
 
@@ -101,8 +101,8 @@
 
 * 차폐 및 ID switching 문제
   * 차폐 문제</br>
-    객체가 사물에 가려지거나 영상 밖으로 나가는 등 탐지 및 추적이 불가능한 상태가 된 후에 다시 등장했을 때 발생하는 문제. </br>
-    사라졌던 객체의 ID가 유지되지 않고 새로운 ID가 부여되는 현상 발생. </br>
+    객체가 사물에 가려지거나 영상 밖으로 나가는 등 탐지 및 추적이 불가능한 상태가 된 후에 </br>
+    다시 등장했을 때 발생하는 문제. 사라졌던 객체의 ID가 유지되지 않고 새로운 ID가 부여되는 현상 발생. </br>
   * ID switching 문제 </br>
     객체 간의 겹침이 발생했을 때 서로의 ID가 바뀌는 현상. </br></br>
   * 해결방안
