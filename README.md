@@ -73,7 +73,7 @@
   YOLOv5 by Glenn Jocher [[github]](https://github.com/ultralytics/yolov5)</br>
   YOLOv5+StrongSORT with OSNet by Mikel Brostrom [[github]](https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet)
 </div>
-</br></br>
+</br>
 
 * YOLOv5</br>
   (YOLOv1 논문) - [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640) </br>
@@ -83,7 +83,6 @@
   이미지 전체를 Regression Task 1가지의 task로 처리하여 detection 속도를 상승시킨 1-stage detector. </br>
   때문에 Real-time object detection에 적합한 특성을 가짐. </br></br>
   YOLOv5는 여러 버전을 거쳐 성능을 개선하고 pytorch 프레임워크를 도입하여 개발됨. </br>
-</br>
 
 * StrongSORT</br>
   ![image](https://user-images.githubusercontent.com/101806955/197722166-0dcdcf18-3215-4dcc-a116-0887eebb66a9.png) </br>
@@ -96,7 +95,7 @@
   * 움직임 보정을 위해 ECC를 사용하고 low-quality detection과 noise에 취약한 </br>
     기존의 kalman filter 대신 NSA kalman algorithm을 사용.
   * cost는 appearance cost와 motion cost의 weight sum.
-</br></br>
+</br>
 
 * 차폐 및 ID switching 문제
   * 차폐 문제</br>
