@@ -2,13 +2,14 @@
 
 ## 팀 구성 및 담당 역할
 - 20172608 이동진 (팀장) </br>
-  RFID 출입 시스템, 학생 인식 및 위치 추적 시스템 개발
+  RFID 출입 시스템 개발 </br>
+  YOLO detector와 StrongSORT tracker를 활용하여 학생 위치 파악 시스템 개발
 - 20172598 김규진 </br>
   반응형 웹서버 front/back-end 개발
 - 20172615 최우석 </br>
   안드로이드 어플리케이션 개발
 - 20172616 한수호 </br>
-  학생 인식 및 위치 추적 시스템 개발
+  YOLO detector와 StrongSORT tracker를 활용하여 학생 위치 파악 시스템 개발
 
 - - -
 
