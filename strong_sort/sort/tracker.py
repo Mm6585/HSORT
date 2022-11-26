@@ -5,19 +5,8 @@ from . import kalman_filter
 from . import linear_assignment
 from . import iou_matching
 from .track import Track
-###
-import socket
-import time
-from location import Location
 
-# todo:
-#   max_id = 정원
-#   if (id > max_id):
-#       nid in ids and nid not in tracking_ids and count(nid)==1
-#           non_id_tracking_object.id = nid
-#       count(nid)>1
-#           non_id_tracking_objects.id = calculate_apperance_distance(nid_list)
-###
+from location import Location
 
 class Tracker:
     """
@@ -47,7 +36,7 @@ class Tracker:
     """
     GATING_THRESHOLD = np.sqrt(kalman_filter.chi2inv95[4])
 
-    def __init__(self, metric, max_iou_distance=0.4, max_age=1000, n_init=3, _lambda=0, ema_alpha=0.9, mc_lambda=0.995, max_id=100, db=None):
+    def __init__(self, metric, max_iou_distance=0.9, max_age=1000, n_init=3, _lambda=0, ema_alpha=0.9, mc_lambda=0.995, max_id=100, db=None):
         self.metric = metric
         self.max_iou_distance = max_iou_distance
         self.max_age = max_age
@@ -58,10 +47,13 @@ class Tracker:
 
         self.kf = kalman_filter.KalmanFilter()
         self.tracks = []
-        self.ids = []           ###
-        self.max_id = max_id    ###
+        ###
+        self.ids = []
+        self.max_id = max_id
         self.db = db
         self.id = 999
+        self.deleted_tracks = []
+        ###
 
     def predict(self):
         """Propagate track state distributions one time step forward.
@@ -92,6 +84,7 @@ class Tracker:
         # Run matching cascade.
         matches, unmatched_tracks, unmatched_detections = \
             self._match(detections)
+
         ###
         # match()로 track과 detection이 가장 유사한 것을 tuple로 매치하여 업데이트
         # 위치 반고정 처리
@@ -128,6 +121,11 @@ class Tracker:
             self.tracks[track_idx].mark_missed()
         for detection_idx in unmatched_detections:
             self._initiate_track(detections[detection_idx], classes[detection_idx].item(), confidences[detection_idx].item())
+        ###
+        for t in self.tracks:
+            if t.is_deleted():
+                self.deleted_tracks.append(t)
+        ###
         self.tracks = [t for t in self.tracks if not t.is_deleted()]
 
         # Update distance metric.
@@ -216,21 +214,24 @@ class Tracker:
         ###
         # id의 개수가 max_id 이상인데 새로운 추적 객체가 생성될 경우
         # 새로 id를 부여하는 것이 아닌 기존에 생성됐던 id지만
-        # 현재 추적 상태가 아닌(i.state != 1, 2) 객체들 중
-        # 가장 유사한 객체의 id를 부여함
-        if (len(self.ids) >= self.max_id):
-            feature_distance = 9999
-            for i in self.tracks:
-                if ((i.state != 2) and (i.state != 1)):
-                    i_feature = np.array(i.features)
-                    temp_distance = np.mean(np.abs(detection.feature-i_feature))
-                    if (feature_distance > temp_distance):
-                        feature_distance = temp_distance
-                        self.id = i.track_id
-                        break
+        # 현재 추적 상태가 아닌(deleted_tracks(state==3)) 객체들 중
+        # 가장 유사한 객체의 id를 부여하고 deleted_track 상태 해제
+        # 
+        if ((len(self.ids) >= self.max_id) and (len(self.deleted_tracks) > 0)):
+            max_feature_distance = 9999
+            for i in self.deleted_tracks:
+                i_feature = np.array(i.features)
+                i_feature_distance = np.mean(np.abs(detection.feature-i_feature))
+                if (max_feature_distance > i_feature_distance):
+                    max_feature_distance = i_feature_distance
+                    self.id = i.track_id
+                    i.state = 2
+                    self.deleted_tracks.remove(i)
+                    print(i.track_id)
+                    break
         else:
-            self.id = self.get_id()
-            # self.id += 1
+            # self.id = self.get_id()
+            self.id += 1
             self.ids.append(self.id)
             print(self.id)
         ###
@@ -239,13 +240,11 @@ class Tracker:
             detection.feature)) 
 ###
     def get_id(self):
-        while(True):
-            self.client_socket.sendall(b'request id')
-            id = self.client_socket.recv(32).decode()
-            print(id)
-            if (len(id) > 0):
-                self.client_socket.send(b'receive id')
-                break
+        self.client_socket.send(b'request id')
+        id = self.client_socket.recv(32).decode()
+        print(id)
+        if (len(id) > 0):
+            self.client_socket.send(b'receive id')
 
         return id
 
