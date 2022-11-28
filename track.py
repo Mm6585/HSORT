@@ -43,7 +43,7 @@ from location import get_json
 ###
 
 # remove duplicated stream handler to avoid duplicated logging
-logging.getLogger().removeHandler(logging.getLogger().handlers[0])
+# logging.getLogger().removeHandler(logging.getLogger().handlers[0])
 
 @torch.no_grad()
 def run(

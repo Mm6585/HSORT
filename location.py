@@ -31,6 +31,6 @@ class Location:
     def get_location(self):
         for x in range(len(df)):
             if df.loc[x]['start_location_y'] < self.cy < df.loc[x]['end_location_y']: 
-                if df.loc[x]['start_location_x'] < self.cx < df.loc[x]['end_location_y']:   
-                    self.location = x + 1       
+                if df.loc[x]['start_location_x'] < self.cx < df.loc[x]['end_location_x']:   
+                    self.location = x + 1
         return self.location
