@@ -13,6 +13,7 @@ from torchreid.utils import FeatureExtractor
 from torchreid.utils.tools import download_url
 #
 from location import Location
+from location import num_seats
 #
 __all__ = ['StrongSORT']
 
@@ -55,6 +56,8 @@ class StrongSORT(object):
         self.tracker = Tracker(
             metric, max_iou_distance=max_iou_distance, max_age=max_age, n_init=n_init, max_id=max_id, db=db)   ###
 
+        self.db = db    ###
+
     def update(self, bbox_xywh, confidences, classes, ori_img):
         self.height, self.width = ori_img.shape[:2]
         # generate detections
@@ -83,21 +86,22 @@ class StrongSORT(object):
             x1, y1, x2, y2 = self._tlwh_to_xyxy(box)
             
             track_id = track.track_id
-            cx, cy = (x1+x2)/2, (y1+y2)/2   ###
-            loc = Location(cx, cy)  ###
-            location= loc.get_location()  ###
             ###
-            if (location != 0):
-                if (location != track.location):
+            cx, cy = (x1+x2)/2, (y1+y2)/2
+            loc = Location(cx, cy)
+            location= loc.get_location()
+            if (location != 0):   
+                if (self.db.get_id(location) == '0'):     
                     update_dict['seat'+str(location)] = {
                         'id': str(track_id)
                     }
-                    if (track.location != 0):
-                        update_dict['seat'+str(track.location)] = {
-                            'id': 0
-                        }
+                    track.location = location
+            elif (track.location != 0):
+                    update_dict['seat'+str(track.location)] = {
+                        'id': '0'
+                    }
+                    track.location = location
             ###
-            track.location = location   ###
             conf = track.conf
             outputs.append(np.array([x1, y1, x2, y2, track_id, location, conf]))    ###
         if len(outputs) > 0:
