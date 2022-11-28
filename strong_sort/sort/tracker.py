@@ -52,6 +52,8 @@ class Tracker:
         self.max_id = max_id
         self.db = db
         self.id = 999
+        self.id_list = ['20172616', '20172615', '20172598']
+        self.i = 0
         self.deleted_tracks = []
         ###
 
@@ -101,17 +103,20 @@ class Tracker:
             loc = Location(cx, cy)
             location= loc.get_location()
             
-            if ((location != 0) and (location != self.tracks[track_idx].location)):
+            if (location != 0):
                 id = int(self.db.get_id(location))
-
-                for j in range(len(matches)):
-                    if (self.tracks[matches[j][0]].track_id == id):
-                        temp_detect_idx = matches[j][1]
-                        matches[j] = (j, detection_idx)
-                        matches[i] = (track_idx, temp_detect_idx)
-                        break
+                if (id != self.tracks[track_idx].track_id):
+                    for j in range(len(matches)):
+                        if (self.tracks[matches[j][0]].track_id == id):
+                            temp_detect_idx = matches[j][1]
+                            matches[j] = (j, detection_idx)
+                            matches[i] = (track_idx, temp_detect_idx)
+                            break
             i += 1
         ###
+        self.match_list = []
+        for i, _ in matches:
+            self.match_list.append(self.tracks[i].track_id)
 
         # Update track set.
         for track_idx, detection_idx in matches:
@@ -216,22 +221,39 @@ class Tracker:
         # 새로 id를 부여하는 것이 아닌 기존에 생성됐던 id지만
         # 현재 추적 상태가 아닌(deleted_tracks(state==3)) 객체들 중
         # 가장 유사한 객체의 id를 부여하고 deleted_track 상태 해제
-        # 
-        if ((len(self.ids) >= self.max_id) and (len(self.deleted_tracks) > 0)):
+        # 만약 state==3인 객체가 없을 경우, 최근에 사라지거나
+        # 탐지에 실패하는 등의 이유로 아직 deleted 상태가 되지 않은 객체
+        # 추적이 확실히 진행 중인 match list에 없는 id를 가져와서
+        # 다시 탐지된, 또는 다시 등장한 객체에 부여함
+        if ((len(self.ids) >= self.max_id)):
             max_feature_distance = 9999
-            for i in self.deleted_tracks:
-                i_feature = np.array(i.features)
-                i_feature_distance = np.mean(np.abs(detection.feature-i_feature))
-                if (max_feature_distance > i_feature_distance):
-                    max_feature_distance = i_feature_distance
-                    self.id = i.track_id
-                    i.state = 2
-                    self.deleted_tracks.remove(i)
-                    print(i.track_id)
-                    break
+            if ((len(self.deleted_tracks) > 0)):
+                for i in self.deleted_tracks:
+                    i_feature = np.array(i.features)
+                    i_feature_distance = np.mean(np.abs(detection.feature-i_feature))
+                    if (max_feature_distance > i_feature_distance):
+                        max_feature_distance = i_feature_distance
+                        self.id = i.track_id
+                        i.state = 2
+                        self.deleted_tracks.remove(i)
+                        print(i.track_id)
+                        break
+            else:
+                for i in self.tracks:
+                    if (i.track_id not in self.match_list):
+                        i_feature = np.array(i.features)
+                        i_feature_distance = np.mean(np.abs(detection.feature-i_feature))
+                        if (max_feature_distance > i_feature_distance):
+                            max_feature_distance = i_feature_distance
+                            self.id = i.track_id
+                            self.match_list.append(i.track_id)
+                            print(i.track_id)
+                            break
         else:
             # self.id = self.get_id()
-            self.id += 1
+            # self.id += 1
+            self.id = self.id_list[self.i]
+            self.i += 1
             self.ids.append(self.id)
             print(self.id)
         ###
